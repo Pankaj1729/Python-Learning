@@ -1,0 +1,114 @@
+// Binary tree insertion
+1. PreOrder
+
+class Node{
+    int key;
+    Node left,right;
+    public Node(int item){
+        key=item;
+        left=right=null;
+    }
+}
+public class Main{
+//Root of Binary tree
+Node root;
+Main(){
+    root =null;
+    
+}
+
+    //print the node of binary tree
+    void print_PreOrder(Node node){
+        if (node==null)
+        return;
+        /*print data of the node*/
+        System.out.println(node.key+"");
+        print_PreOrder(node.left);
+        print_PreOrder(node.right);
+    }
+    void print_PreOrder(){
+        print_PreOrder(root);
+    }
+
+//Driver Method
+public static void main(String []args){
+    Main tree =new Main();
+    tree.root=new Node(55);
+    tree.root.left=new Node(21);
+    tree.root.right=new Node(80);
+    tree.root.left.left=new Node(9);
+    tree.root.left.right=new Node(29);
+    tree.root.right.left=new Node(76);
+    tree.root.right.right=new Node(91);
+    System.out.println("Preorder traversal of binary tree is: ");
+    tree.print_PreOrder();
+}
+}
+
+Output:
+Preorder traversal of binary tree is:                                                                                                                                              
+55                                                                                                                                                                                 
+21                                                                                                                                                                                 
+9                                                                                                                                                                                  
+29                                                                                                                                                                                 
+80                                                                                                                                                                                 
+76                                                                                                                                                                                 
+91
+
+2.InOrder
+
+class Node{
+    int key;
+    Node left,right;
+    public Node(int item){
+        key=item;
+        left=right=null;
+    }
+}
+public class Main{
+//Root of Binary tree
+Node root;
+Main(){
+    root =null;
+    
+}
+
+    //print the node of binary tree
+    void print_InOrder(Node node){
+        if (node==null)
+        return;
+        /*print data of the node*/
+        print_InOrder(node.left);
+        System.out.println(node.key+"");
+        print_InOrder(node.right);
+        
+    }
+    void print_InOrder(){
+        print_InOrder(root);
+    }
+
+//Driver Method
+public static void main(String []args){
+    Main tree =new Main();
+    tree.root=new Node(55);
+    tree.root.left=new Node(21);
+    tree.root.right=new Node(80);
+    tree.root.left.left=new Node(9);
+    tree.root.left.right=new Node(29);
+    tree.root.right.left=new Node(76);
+    tree.root.right.right=new Node(91);
+    System.out.println("Inorder traversal of binary tree is: ");
+    tree.print_InOrder();
+}
+}
+
+Output:
+Inorder traversal of binary tree is:                                                                                                                                               
+9                                                                                                                                                                                  
+21                                                                                                                                                                                 
+29                                                                                                                                                                                 
+55                                                                                                                                                                                 
+76                                                                                                                                                                                 
+80                                                                                                                                                                                 
+91  
+    

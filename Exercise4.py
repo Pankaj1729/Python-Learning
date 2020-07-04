@@ -1,0 +1,5 @@
+user_name,single_char = input("enter user_name and Single_character : ").split(",")
+print(f"user_name is {user_name} and user_name length is {len(user_name)}")
+count = user_name.count(single_char.lower()) + user_name.count(single_char.upper()) 
+print(f"single_character is {single_char} and occurance of single_character in user_name is {count}")
+#name.lower().count(single_char.lower())
